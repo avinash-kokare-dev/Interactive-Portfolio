@@ -6,6 +6,7 @@ import ContactSection from '../components/ContactSection';
 import HeroSection from '../components/HeroSection';
 import { ExperienceSection } from '@/components/ExperienceSection';
 import { ProjectCarousel } from '@/components/ProjectCarousel';
+import { EducationSection } from '@/components/EducationSection';
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <About />
       <ExperienceSection />
       <ProjectCarousel />
+      <EducationSection />
       <ContactSection />
     </>
   );
