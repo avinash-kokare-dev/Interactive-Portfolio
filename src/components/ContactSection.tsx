@@ -64,7 +64,7 @@ const ContactSection = () => {
                 <FaMapMarkerAlt />
               </div>
               <h3>Location</h3>
-              <p>San Francisco, CA</p>
+              <p>Panvel, Navi Mumbai, India</p>
             </motion.div>
 
             <motion.div 
@@ -75,7 +75,7 @@ const ContactSection = () => {
                 <FaEnvelope />
               </div>
               <h3>Email</h3>
-              <a href="mailto:hello@example.com">hello@example.com</a>
+              <a href="mailto:avi1999kokare@gmail.com">avi1999kokare@gmail.com</a>
             </motion.div>
 
             <motion.div 
@@ -86,7 +86,7 @@ const ContactSection = () => {
                 <FaPhone />
               </div>
               <h3>Phone</h3>
-              <a href="tel:+1234567890">+1 (234) 567-890</a>
+              <a href="tel:+1234567890">+91-9892583723</a>
             </motion.div>
           </motion.div>
 
