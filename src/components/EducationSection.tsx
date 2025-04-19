@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGraduationCap, FaUniversity, FaSchool } from 'react-icons/fa';
 import styles from '../styles/EducationSection.module.scss';
