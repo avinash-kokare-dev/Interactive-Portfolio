@@ -59,7 +59,7 @@ export const ProjectCarousel = () => {
   const visibleProjects = projects.slice(currentIndex, currentIndex + 3);
 
   return (
-    <section id="projects" className={styles.projects}>
+    <section id="Projects" className={styles.projects}>
       <motion.h2 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
