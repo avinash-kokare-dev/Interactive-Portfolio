@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import styles from '../styles/ProjectCarousel.module.scss';
+import Link from 'next/link';
 
 const projects = [
   {
@@ -98,14 +99,14 @@ export const ProjectCarousel = () => {
                 ))}
               </div>
               
-              <a 
+              <Link
                 href={project.githubLink} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className={styles.githubLink}
               >
                 <FaGithub /> View on GitHub
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>

@@ -9,9 +9,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    { name: 'Projects', path: 'Projects' },
     { name: 'About', path: 'About' },
     { name: 'Experience', path: 'Experience' },
+    { name: 'Projects', path: 'Projects' },
     { name: 'Contact', path: 'Contact' },
   ]
 
@@ -24,7 +24,7 @@ const Navbar = () => {
     >
       <div className={`container ${styles.container}`}>
         <Link href="#Home" className={styles.logo}>
-          MyPortfolio
+          Avinash Kokare
         </Link>
         {/* <ThemeToggle /> */}
 
