@@ -58,7 +58,7 @@ export const ProjectCarousel = () => {
     );
   };
 
-  const visibleProjects = projects.slice(currentIndex, currentIndex + 3);
+  const visibleProjects = projects.slice(currentIndex, currentIndex + projects.length);
 
   return (
     <section id="Projects" className={styles.projects}>
