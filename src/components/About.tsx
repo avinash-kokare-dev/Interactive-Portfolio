@@ -65,7 +65,7 @@ const AboutSection = () => {
             </motion.p>
 
             <motion.p variants={itemVariants}>
-              Hi, I'm Avinash Vitthal Kokare. I specialize in building responsive,
+              Hi, I&apos;m Avinash Vitthal Kokare. I specialize in building responsive,
               user-friendly web applications with modern technologies.
               With {getYearOfExperience()} years of experience, I bridge design and technology
               to create impactful digital solutions.

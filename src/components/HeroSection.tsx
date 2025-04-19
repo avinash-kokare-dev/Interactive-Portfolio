@@ -3,7 +3,6 @@ import { TypeAnimation } from 'react-type-animation';
 import styles from '../styles/HeroSection.module.scss';
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope } from 'react-icons/fa';
 import Link from 'next/link';
-import Image from 'next/image';
 
 const HeroSection = () => {
   const containerVariants = {
@@ -67,7 +66,7 @@ const HeroSection = () => {
         <div>
           <motion.div className={styles.textContainer} variants={itemVariants}>
             <motion.p className={styles.greeting} variants={itemVariants}>
-              Hello, I'm
+              Hello, I&apos;m
             </motion.p>
 
             <motion.h1 className={styles.name} variants={itemVariants}>

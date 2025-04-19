@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useState } from 'react'
 import styles from '../styles/Navbar.module.scss'
-import ThemeToggle from './ThemeToggle'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)

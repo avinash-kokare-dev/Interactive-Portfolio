@@ -51,7 +51,7 @@ const ContactSection = () => {
           <motion.div className={styles.header} variants={itemVariants}>
             <h2>Get In Touch</h2>
             <div className={styles.divider} />
-            <p>Have a project in mind or want to collaborate? Let's talk!</p>
+            <p>Have a project in mind or want to collaborate? Let&apos;s talk!</p>
           </motion.div>
 
           <div className={styles.content}>
