@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import styles from '../styles/HeroSection.module.scss';
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope } from 'react-icons/fa';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const HeroSection = () => {
   const containerVariants = {
@@ -24,77 +26,114 @@ const HeroSection = () => {
     }
   };
 
+  const socialLinks = [
+    {
+      name: 'GitHub',
+      icon: <FaGithub />,
+      url: 'https://github.com/avinash-kokare-dev',
+    },
+    {
+      name: 'LinkedIn',
+      icon: <FaLinkedin />,
+      url: 'https://www.linkedin.com/in/nyash-dev/',
+    },
+    {
+      name: 'Twitter',
+      icon: <FaTwitter />,
+      url: 'https://twitter.com/yourhandle',
+    },
+    {
+      name: 'Instagram',
+      icon: <FaInstagram />,
+      url: 'https://www.instagram.com/avk_nyash45',
+    },
+    {
+      name: 'Email',
+      icon: <FaEnvelope />,
+      url: 'mailto:avi1999kokare@gmail.com',
+    },
+  ];
+
   return (
-    <motion.section 
+    <motion.section
       className={styles.hero}
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
       <div className={styles.gradientBg} />
-      
-      <div className={styles.content}>
-        <motion.div className={styles.textContainer} variants={itemVariants}>
-          <motion.p className={styles.greeting} variants={itemVariants}>
-            Hello, I'm
-          </motion.p>
-          
-          <motion.h1 className={styles.name} variants={itemVariants}>
-            <span>Avinash</span> Kokare
-          </motion.h1>
-          
-          <motion.div className={styles.animatedText} variants={itemVariants}>
-            <TypeAnimation
-              sequence={[
-                'Frontend Developer',
-                1500,
-                'Backend Developer',
-                1500,
-                'UI/UX Designer',
-                1500,
-              ]}
-              wrapper="h2"
-              cursor={true}
-              repeat={Infinity}
-              className={styles.typeAnimation}
-            />
-          </motion.div>
-        </motion.div>
 
-        <motion.div className={styles.ctaContainer} variants={itemVariants}>
-          <motion.button
-            className={styles.primaryBtn}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            View My Work
-          </motion.button>
-          <motion.button
-            className={styles.secondaryBtn}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Link href={'#Contact'}>Contact Me</Link>
-          </motion.button>
+      <div className={styles.content}>
+        <div>
+          <motion.div className={styles.textContainer} variants={itemVariants}>
+            <motion.p className={styles.greeting} variants={itemVariants}>
+              Hello, I'm
+            </motion.p>
+
+            <motion.h1 className={styles.name} variants={itemVariants}>
+              <span>Avinash</span> Kokare
+            </motion.h1>
+
+            <motion.div className={styles.animatedText} variants={itemVariants}>
+              <TypeAnimation
+                sequence={[
+                  'Frontend Developer',
+                  1500,
+                  'Backend Developer',
+                  1500,
+                  'UI/UX Designer',
+                  1500,
+                ]}
+                wrapper="h2"
+                cursor={true}
+                repeat={Infinity}
+                className={styles.typeAnimation}
+              />
+            </motion.div>
+          </motion.div>
+          <motion.div className={styles.ctaContainer} variants={itemVariants}>
+            <motion.button
+              className={styles.primaryBtn}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link href={'https://github.com/avinash-kokare-dev'}>View My Work</Link>
+            </motion.button>
+            <motion.button
+              className={styles.secondaryBtn}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link href={'#Contact'}>Contact Me</Link>
+            </motion.button>
+          </motion.div>
+        </div>
+
+        {/* Image (Right Side) */}
+        <motion.div
+          className={styles.imageWrapper}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.2, duration: 0.7 }}
+        >
+          <div className={styles.socialLinks}>
+            {socialLinks.map((social, index) => (
+              <motion.a
+                key={index}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.name}
+                whileHover={{ y: -3 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                {social.icon}
+              </motion.a>
+            ))}
+          </div>
+          <div className={styles.decorativeShape} />
         </motion.div>
       </div>
-
-      <motion.div 
-        className={styles.scrollIndicator}
-        animate={{
-          y: [0, 15, 0]
-        }}
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      >
-        <div className={styles.mouse}>
-          <div className={styles.wheel} />
-        </div>
-        <p>Scroll Down</p>
-      </motion.div>
     </motion.section>
   );
 };
