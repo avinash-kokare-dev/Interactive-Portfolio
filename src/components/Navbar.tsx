@@ -54,7 +54,7 @@ const Navbar = () => {
         {navItems.map((item) => (
           <Link 
             key={item.name} 
-            href={item.path} 
+            href={`#${item.path}`} 
             className={styles.mobileLink}
             onClick={() => setIsOpen(false)}
           >
