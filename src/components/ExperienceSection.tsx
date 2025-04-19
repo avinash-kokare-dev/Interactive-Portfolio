@@ -28,6 +28,19 @@ const experiences = [
       "Integrated payment gateways with 99.9% uptime",
       "Implemented CI/CD pipelines reducing deployment time"
     ]
+  },
+  {
+    id: 3,
+    company: "Digital Creations LLC",
+    position: "Frontend Developer",
+    startDate: "2020-06-10",
+    endDate: "2022-03-10",
+    description: "Developed and maintained e-commerce platforms serving 50K+ monthly users. Implemented features that increased conversion rates by 15%.",
+    highlights: [
+      "Built reusable component library adopted company-wide",
+      "Integrated payment gateways with 99.9% uptime",
+      "Implemented CI/CD pipelines reducing deployment time"
+    ]
   }
 ];
 
@@ -43,7 +56,7 @@ const formatDate = (dateString: string) => {
 
 export const ExperienceSection = () => {
   return (
-    <section id="experience" className={styles.experience}>
+    <section id="Experience" className={styles.experience} >
       <motion.h2 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +73,7 @@ export const ExperienceSection = () => {
             className={styles.experienceCard}
             initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: false, margin: "-50px" }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
           >
             <div className={styles.companyHeader}>

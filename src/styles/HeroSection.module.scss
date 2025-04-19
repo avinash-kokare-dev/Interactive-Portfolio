@@ -68,7 +68,7 @@
 
 .animatedText {
   min-height: 4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   h2 {
     font-size: 2rem;
@@ -171,6 +171,27 @@
   background-color: white;
   border-radius: 3px;
   animation: scrollWheel 2s infinite;
+}
+
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+
+  a {
+    color: #121212;
+    font-size: 2rem;
+    transition: color 0.3s, transform 0.3s;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+
+    svg {
+      display: block;
+    }
+  }
 }
 
 @keyframes scrollWheel {

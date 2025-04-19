@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import styles from '../styles/HeroSection.module.scss';
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -24,6 +25,34 @@ const HeroSection = () => {
       transition: { type: 'spring', stiffness: 100 }
     }
   };
+
+  const socialLinks = [
+    {
+      name: 'GitHub',
+      icon: <FaGithub />,
+      url: 'https://github.com/avinash-kokare-dev',
+    },
+    {
+      name: 'LinkedIn',
+      icon: <FaLinkedin />,
+      url: 'https://www.linkedin.com/in/nyash-dev/',
+    },
+    {
+      name: 'Twitter',
+      icon: <FaTwitter />,
+      url: 'https://twitter.com/yourhandle',
+    },
+    {
+      name: 'Instagram',
+      icon: <FaInstagram />,
+      url: 'https://www.instagram.com/avk_nyash45',
+    },
+    {
+      name: 'Email',
+      icon: <FaEnvelope />,
+      url: 'mailto:avi1999kokare@gmail.com',
+    },
+  ];
 
   return (
     <motion.section
@@ -61,8 +90,6 @@ const HeroSection = () => {
                 className={styles.typeAnimation}
               />
             </motion.div>
-
-            <motion.div> <h3>Crafting digital experiences that blend innovation with elegance.</h3></motion.div>
           </motion.div>
           <motion.div className={styles.ctaContainer} variants={itemVariants}>
             <motion.button
@@ -89,34 +116,24 @@ const HeroSection = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2, duration: 0.7 }}
         >
-          <Image
-            src="/hero-section.jpeg" // Replace with your image path
-            alt="Profile Image"
-            width={500}
-            height={500}
-            className={styles.profileImage}
-            priority
-          />
+          <div className={styles.socialLinks}>
+            {socialLinks.map((social, index) => (
+              <motion.a
+                key={index}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.name}
+                whileHover={{ y: -3 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                {social.icon}
+              </motion.a>
+            ))}
+          </div>
           <div className={styles.decorativeShape} />
         </motion.div>
       </div>
-
-      <motion.div
-        className={styles.scrollIndicator}
-        animate={{
-          y: [0, 15, 0]
-        }}
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      >
-        <div className={styles.mouse}>
-          <div className={styles.wheel} />
-        </div>
-        <p>Scroll Down</p>
-      </motion.div>
     </motion.section>
   );
 };

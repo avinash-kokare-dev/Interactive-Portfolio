@@ -1,8 +1,10 @@
+
 .about {
-  padding: 8rem 0;
-  background-color: var(--background);
+  margin: 2rem 0;
+  background-color: #f8f9fa;
   position: relative;
-  overflow: hidden;
+  scroll-margin-top: 4.2rem;
+  scroll-margin-top: 100px;
 }
 
 .container {
@@ -108,6 +110,45 @@
   .mainImage {
     transform-style: preserve-3d;
     animation: float 6s ease-in-out infinite;
+  }
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.skillItem {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: rgba(58, 134, 255, 0.05);
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(58, 134, 255, 0.1);
+  }
+  
+  .skillIcon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-top: 0.2rem;
+  }
+  
+  h4 {
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+  }
+  
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--gray-color);
   }
 }
 

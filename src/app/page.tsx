@@ -7,6 +7,7 @@ import About from '../components/About';
 import ContactSection from '../components/ContactSection';
 import HeroSection from '../components/HeroSection';
 import { ExperienceSection } from '@/components/ExperienceSection';
+import { ProjectCarousel } from '@/components/ProjectCarousel';
 
 const Home = () => {
   return (
@@ -40,6 +41,7 @@ const Home = () => {
       </motion.main> */}
       <About />
       <ExperienceSection />
+      <ProjectCarousel />
       <ContactSection />
     </>
   );
