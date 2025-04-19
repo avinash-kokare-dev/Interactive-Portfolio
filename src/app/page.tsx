@@ -13,6 +13,7 @@ const Home = () => {
       <Head>
         <title>My Portfolio</title>
         <meta name="description" content="Professional portfolio" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5" />
       </Head>
       <HeroSection />
       <About />

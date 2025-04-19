@@ -14,10 +14,15 @@
       color: #0d6efd;
     }
   }
+  @media screen {
+    h2{
+      font-size: 2rem;
+    }
+  }
 }
 
 .timeline {
-  margin: 0 auto;
+  margin: 1rem;
   position: relative;
 
   &::before {
@@ -60,6 +65,7 @@
 
     @media (max-width: 768px) {
       width: calc(100% - 70px);
+      margin-left: 0px;
     }
   }
 
@@ -70,6 +76,7 @@
 
     @media (max-width: 768px) {
       width: calc(100% - 70px);
+      margin-right: 0px;
     }
   }
 }

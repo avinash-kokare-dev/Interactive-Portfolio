@@ -68,13 +68,10 @@ export const ExperienceSection = () => {
 
       <div className={styles.timeline}>
         {experiences.map((exp, index) => (
-          <motion.div 
+          <div 
             key={exp.id}
             className={styles.experienceCard}
-            initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
+            
           >
             <div className={styles.companyHeader}>
               <div className={styles.companyIcon}>
@@ -106,7 +103,7 @@ export const ExperienceSection = () => {
                 </motion.li>
               ))}
             </ul>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>
