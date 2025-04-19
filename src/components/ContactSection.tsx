@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion, useInView } from 'framer-motion';
 import { FaPaperPlane, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
 import styles from '../styles/ContactSection.module.scss';

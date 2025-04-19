@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { FaBriefcase, FaCalendarAlt } from 'react-icons/fa';
 import styles from '../styles/ExperienceSection.module.scss';
@@ -67,7 +68,7 @@ export const ExperienceSection = () => {
       </motion.h2>
 
       <div className={styles.timeline}>
-        {experiences.map((exp, index) => (
+        {experiences.map((exp) => (
           <div 
             key={exp.id}
             className={styles.experienceCard}
