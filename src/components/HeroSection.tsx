@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import styles from '../styles/HeroSection.module.scss';
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope, FaDownload } from 'react-icons/fa';
 import Link from 'next/link';
 
 const HeroSection = () => {
@@ -53,6 +53,16 @@ const HeroSection = () => {
       url: 'mailto:avi1999kokare@gmail.com',
     },
   ];
+
+  const handleDownload = () => {
+    const resumeUrl = '/Avinash-Kokare.pdf';
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.download = 'Avinash-Kokare.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <motion.section
@@ -105,6 +115,18 @@ const HeroSection = () => {
               whileTap={{ scale: 0.95 }}
             >
               <Link href={'#Contact'}>Contact Me</Link>
+            </motion.button>
+            <motion.button
+              className={styles.downloadButton}
+              onClick={handleDownload}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <FaDownload className={styles.icon} />
+              Download Resume
             </motion.button>
           </motion.div>
         </div>

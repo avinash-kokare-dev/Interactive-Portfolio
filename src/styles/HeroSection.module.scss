@@ -1,10 +1,15 @@
 .hero {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
   padding: 0 2rem;
+  @media (max-width: 768px){
+    &{
+      height: 80vh;
+    }
+  }
 }
 
 .gradientBg {
@@ -191,6 +196,31 @@
     svg {
       display: block;
     }
+  }
+}
+
+.downloadButton {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem 1.8rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(101, 87, 255, 0.3);
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(101, 87, 255, 0.4);
+  }
+  
+  .icon {
+    font-size: 1rem;
   }
 }
 
