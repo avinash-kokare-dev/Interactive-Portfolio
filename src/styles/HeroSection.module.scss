@@ -5,11 +5,6 @@
   position: relative;
   overflow: hidden;
   padding: 0 2rem;
-  @media (max-width: 768px){
-    &{
-      height: 80vh;
-    }
-  }
 }
 
 .gradientBg {
