@@ -5,12 +5,6 @@ import styles from '../styles/ContactSection.module.scss';
 import { useRef } from 'react';
 import toast from 'react-hot-toast';
 
-interface ContactFormState {
-  name: string;
-  email: string;
-  message: string;
-  subject: string;
-}
 
 interface ContactFormEvent extends React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> { }
 
