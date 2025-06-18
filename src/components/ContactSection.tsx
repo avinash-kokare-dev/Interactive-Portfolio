@@ -50,7 +50,7 @@ const ContactSection = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch('/api/send', {
+      const res = await fetch('/api/call', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
@@ -70,11 +70,11 @@ const ContactSection = () => {
         setForm({ name: '', email: '', message: '', subject: '' });
         setLoading(false);
       } else {
-        toast.error('❌ Failed to send message.');
+        toast.error('Failed to send message.');
         setLoading(false);
       }
     } catch (err) {
-      toast.error('❌ Something went wrong.');
+      toast.error('Something went wrong.');
       setLoading(false);
     }
   };
