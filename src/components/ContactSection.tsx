@@ -5,9 +5,6 @@ import styles from '../styles/ContactSection.module.scss';
 import { useRef } from 'react';
 import toast from 'react-hot-toast';
 
-
-interface ContactFormEvent extends React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> { }
-
 const ContactSection = () => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: false, margin: "-200px" });
@@ -16,7 +13,7 @@ const ContactSection = () => {
 
 
 
-  const handleChange = (e: ContactFormEvent) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
