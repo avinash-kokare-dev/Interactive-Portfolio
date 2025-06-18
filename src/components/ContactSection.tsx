@@ -74,6 +74,7 @@ const ContactSection = () => {
         setLoading(false);
       }
     } catch (err) {
+      console.log(err)
       toast.error('Something went wrong.');
       setLoading(false);
     }
