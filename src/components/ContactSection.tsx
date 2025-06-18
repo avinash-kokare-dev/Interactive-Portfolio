@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { FaPaperPlane, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
 import styles from '../styles/ContactSection.module.scss';
@@ -7,6 +7,12 @@ import { useRef } from 'react';
 const ContactSection = () => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: false, margin: "-200px" });
+  const [form, setForm] = useState({ name: '', email: '', message: '', subject: '' });
+  const [status, setStatus] = useState('');
+
+  const handleChange = (e:any) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -34,6 +40,27 @@ const ContactSection = () => {
       scale: 1,
       opacity: 1,
       transition: { delay: 0.5, type: 'spring' }
+    }
+  };
+
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('Sending...');
+
+    const res = await fetch('/api/send', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    });
+
+    if (res.ok) {
+      setStatus('✅ Message sent!');
+      setForm({ name: '', email: '', message: '', subject: '' });
+      console.log("Submiteed...")
+    } else {
+      setStatus('❌ Failed to send message.');
+      console.log("not Submiteed...")
     }
   };
 
@@ -96,12 +123,16 @@ const ContactSection = () => {
             <motion.form
               className={styles.form}
               variants={formVariants}
+              onSubmit={(e) => handleSubmit(e)}
             >
               <motion.div className={styles.formGroup}>
                 <input
                   type="text"
                   placeholder="Your Name"
                   required
+                  value={form.name}
+                  onChange={(e) => handleChange(e)}
+                  name='name'
                 />
               </motion.div>
 
@@ -110,6 +141,9 @@ const ContactSection = () => {
                   type="email"
                   placeholder="Your Email"
                   required
+                  onChange={handleChange}
+                  value={form.email}
+                  name='email'
                 />
               </motion.div>
 
@@ -117,6 +151,9 @@ const ContactSection = () => {
                 <input
                   type="text"
                   placeholder="Subject"
+                  onChange={handleChange}
+                  value={form.subject}
+                  name='subject'
                 />
               </motion.div>
 
@@ -125,6 +162,9 @@ const ContactSection = () => {
                   placeholder="Your Message"
                   rows={5}
                   required
+                  onChange={handleChange}
+                  value={form.message}
+                  name='message'
                 />
               </motion.div>
 
