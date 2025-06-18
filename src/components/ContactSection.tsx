@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { FaPaperPlane, FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
 import styles from '../styles/ContactSection.module.scss';
 import { useRef } from 'react';
+import toast from 'react-hot-toast';
 
 const ContactSection = () => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: false, margin: "-200px" });
   const [form, setForm] = useState({ name: '', email: '', message: '', subject: '' });
-  const [status, setStatus] = useState('');
+  const [loading, setLoading] = useState(false);
 
-  const handleChange = (e:any) => {
+  const handleChange = (e: any) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
@@ -45,22 +46,36 @@ const ContactSection = () => {
 
 
   const handleSubmit = async (e: React.FormEvent) => {
+    setLoading(true);
     e.preventDefault();
-    setStatus('Sending...');
 
-    const res = await fetch('/api/send', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(form),
-    });
+    try {
+      const res = await fetch('/api/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
 
-    if (res.ok) {
-      setStatus('✅ Message sent!');
-      setForm({ name: '', email: '', message: '', subject: '' });
-      console.log("Submiteed...")
-    } else {
-      setStatus('❌ Failed to send message.');
-      console.log("not Submiteed...")
+      if (res.ok) {
+        toast.success('📩 We’ve received your email. Thank you for reaching out!', {
+          style: {
+            border: '1px solid #4ade80',
+            padding: '16px',
+            color: '#064e3b',
+            backgroundColor: '#ecfdf5',
+            fontSize: '15px',
+            fontWeight: '500',
+          },
+        });
+        setForm({ name: '', email: '', message: '', subject: '' });
+        setLoading(false);
+      } else {
+        toast.error('❌ Failed to send message.');
+        setLoading(false);
+      }
+    } catch (err) {
+      toast.error('❌ Something went wrong.');
+      setLoading(false);
     }
   };
 
@@ -173,8 +188,18 @@ const ContactSection = () => {
                 className={styles.submitButton}
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
+                disabled={loading}
               >
-                Send Message <FaPaperPlane />
+                {loading ? (
+                  <>
+                    <span className={styles.loader}></span>
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    Send Message <FaPaperPlane />
+                  </>
+                )}
               </motion.button>
             </motion.form>
           </div>
