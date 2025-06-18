@@ -46,10 +46,7 @@ const AboutSection = () => {
             className={styles.imageColumn}
             variants={itemVariants}
           >
-            <div className={styles.imageWrapper}>
-              <div className={styles.mainImage} />
-              <div className={styles.decorativeShape} />
-            </div>
+            <img src="/avinash_kokare.jpeg" alt="Profile Image" className={styles.profileImage}/>
           </motion.div>
 
           {/* Content Column */}
