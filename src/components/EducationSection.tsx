@@ -82,7 +82,7 @@ export const EducationSection = () => {
                             </div>
 
                             <div className={styles.institution}>
-                                {edu.institution} • {edu.duration}
+                                {edu.institution} ({edu.duration})
                             </div>
 
                             <p className={styles.description}>{edu.description}</p>

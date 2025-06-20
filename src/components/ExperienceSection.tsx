@@ -16,7 +16,7 @@ const experiences = [
   },
   {
     id: 2,
-    company: "Bluebricks Technologies Pvt Ltd, Pune",
+    company: "Blue Bricks Pvt. Ltd, Pune",
     position: "Full Stack Developer",
     startDate: "2022-07-02",
     endDate: "2022-10-12",
@@ -28,7 +28,7 @@ const experiences = [
   {
     id: 3,
     company: "Cere Labs Pvt. Ltd, Mulund",
-    position: "Frontend Developer",
+    position: "Software Engineer",
     startDate: "2021-06-22",
     endDate: "2022-06-27",
     description: "Worked as a Software Engineer on AI-driven software products at a product-based company, contributing to the development and maintenance",

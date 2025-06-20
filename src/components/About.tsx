@@ -74,7 +74,7 @@ const AboutSection = () => {
                 <FaCode className={styles.skillIcon} />
                 <div>
                   <h4>Frontend</h4>
-                  <p>React, Next.js, TypeScript</p>
+                  <p>React, Next.js, TypeScript, React Native</p>
                 </div>
               </div>
 

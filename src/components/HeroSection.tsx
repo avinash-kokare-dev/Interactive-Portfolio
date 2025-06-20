@@ -40,7 +40,7 @@ const HeroSection = () => {
     {
       name: 'Twitter',
       icon: <FaTwitter />,
-      url: 'https://twitter.com/yourhandle',
+      url: 'https://x.com/avk_nash',
     },
     {
       name: 'Instagram',
@@ -81,7 +81,7 @@ const HeroSection = () => {
             </motion.p>
 
             <motion.h1 className={styles.name} variants={itemVariants}>
-              <span>Avinash</span> Kokare
+              <span>AVINASH</span> KOKARE
             </motion.h1>
 
             <motion.div className={styles.animatedText} variants={itemVariants}>

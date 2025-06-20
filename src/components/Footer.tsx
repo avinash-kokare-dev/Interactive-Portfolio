@@ -12,27 +12,27 @@ const Footer = () => {
     {
       name: 'GitHub',
       icon: <FaGithub />,
-      url: 'https://github.com/yourusername',
+      url: 'https://github.com/avinash-kokare-dev',
     },
     {
       name: 'LinkedIn',
       icon: <FaLinkedin />,
-      url: 'https://linkedin.com/in/yourprofile',
+      url: 'https://in.linkedin.com/in/nyash-dev',
     },
     {
       name: 'Twitter',
       icon: <FaTwitter />,
-      url: 'https://twitter.com/yourhandle',
+      url: 'https://x.com/avk_nash',
     },
     {
       name: 'Instagram',
       icon: <FaInstagram />,
-      url: 'https://instagram.com/yourprofile',
+      url: 'https://www.instagram.com/avk_nyash45',
     },
     {
       name: 'Email',
       icon: <FaEnvelope />,
-      url: 'mailto:your.email@example.com',
+      url: 'mailto:avi1999kokare@gmail.com',
     },
   ];
 
