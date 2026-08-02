@@ -75,9 +75,9 @@ const AboutSection = () => {
 
             <motion.p variants={itemVariants}>
               Hi, I&apos;m <b>Avinash Vitthal Kokare</b>.
-              I'm a <b>Senior Software Engineer with 5+ years</b> of experience building scalable, high-performance web applications and full-stack products. My expertise spans <b>frontend architecture, performance engineering, backend development, and AI-powered applications</b>, with hands-on experience delivering production systems used by thousands of users.
+              I am a <b>Senior Software Engineer with 5+ years</b> of experience building scalable, high-performance web applications and full-stack products. My expertise spans <b>frontend architecture, performance engineering, backend development, and AI-powered applications</b>, with hands-on experience delivering production systems used by thousands of users.
               I enjoy solving complex engineering challenges—from improving Core Web Vitals and modernizing frontend architectures to designing scalable APIs, integrating distributed systems, and optimizing application performance. I believe great software is built by balancing user experience, engineering excellence, and measurable business impact.
-              Beyond writing code, I enjoy collaborating across product, design, and engineering teams, mentoring developers, and driving technical discussions that improve scalability, maintainability, and long-term product quality. I'm currently expanding my expertise in distributed systems, system design to build software that performs reliably at scale.
+              Beyond writing code, I enjoy collaborating across product, design, and engineering teams, mentoring developers, and driving technical discussions that improve scalability, maintainability, and long-term product quality. I am currently expanding my expertise in distributed systems, system design to build software that performs reliably at scale.
             </motion.p>
 
             <div className={styles.skills}>
