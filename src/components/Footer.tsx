@@ -62,12 +62,12 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className={styles.linksColumn}>
+            {/* <div className={styles.linksColumn}>
               <h4>Resources</h4>
               <ul>
                 <li><Link href="/blog">Blog</Link></li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
 

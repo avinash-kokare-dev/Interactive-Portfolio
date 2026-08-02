@@ -2,16 +2,23 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaBriefcase, FaCalendarAlt } from 'react-icons/fa';
 import styles from '../styles/ExperienceSection.module.scss';
+import { on } from 'nodemailer/lib/smtp-transport';
 
 const experiences = [
   {
     id: 1,
-    company: "OZiva Pvt. Ltd, Mumbai",
-    position: "Software Engineer",
+    company: "OZiva (HUL)",
+    position: "Sr. Software Engineer",
     startDate: "2022-10-17",
     endDate: "present",
-    description: "Collaborated with a team of 5 developers to build responsive web applications using React, Next.js, and TypeScript, contributing to a fast and consistent user experience across devices.",
-    highlights: [ "Spearheaded the development and optimization of scalable, user-centric features using modern frontend frameworks like React and Next.js, ensuring smooth performance across devices and browsers.","Adopted best practices and modern tooling to optimize resource consumption (JS/CSS size, network requests, rendering performance) without compromising user experience.","Partnered closely with product managers and designers to deliver high-impact features—one of which contributed directly to a 12–14% increase in company revenue post-launch.","Led a cost optimization initiative focused on frontend performance, asset delivery, and infrastructure utilization, resulting in approximately 40% savings in operational expenses.","Continuously drove website performance improvements by implementing performance audits, lazy loading, code-splitting, and other optimization techniques to improve load speed, responsiveness, and overall UX.","Integrated analytics platforms such as Google Analytics and MoEngage for comprehensive event tracking and behavior analysis, enabling data-driven decision-making across product and marketing teams."
+    description: "Engineered scalable, production-ready full-stack applications by building reusable frontend experiences and reliable backend services. Focused on delivering maintainable, high-quality software with strong engineering standards, performance, and user experience.",
+    highlights: [ 
+      "Took ownership to migrate OZiva's headless e-commerce platform from a custom React.js storefront to Shopify Hydrogen (SSR), improving Google PageSpeed scores from 20 - 25 to 75+, reducing bounce rates by 30–35%, and increasing conversion rates (CVR) from ~2–3% to ~4–5% through Server-Side Rendering (SSR), optimized rendering strategies, and Core Web Vitals improvements. Established a scalable frontend architecture that accelerated feature delivery and enhanced the overall customer experience.",
+      "Modernized the frontend architecture by introducing a feature-based modular architecture, improving code maintainability, scalability, and developer productivity. Optimized bundle delivery using React Server Components, code splitting, lazy loading, and render optimization, significantly improving application performance and the overall user experience.",
+      "Delivered business-critical customer journeys across Web and React Native applications by building scalable frontend features, integrating Razorpay as a cost-effective payment solution, and implementing GA4, Google Tag Manager, and Mixpanel analytics. Partnered with Product teams to drive A/B testing, enabling data-driven product decisions, continuous conversion optimization, and improved customer engagement.",
+      "Engineered secure RESTful APIs within a microservices architecture using Node.js and Express.js, implementing JWT-based authentication (Access & Refresh Tokens), standardized request validation, and reusable service layers to build secure, scalable, and maintainable backend services powering critical e-commerce workflows.",
+      "Improved backend performance and scalability by implementing Redis caching for frequently accessed business data, reducing database load and API response latency, while leveraging Kafka-driven asynchronous event processing for reliable order notification workflows, improving system responsiveness, operational resilience, and supporting high-traffic production workloads.",
+      "Mentored 2 junior engineers and 4 interns through technical guidance, code reviews, debugging sessions, and architecture discussions, promoting engineering best practices, accelerating onboarding, and improving overall team productivity and software quality."
     ]
   },
   {
@@ -22,7 +29,8 @@ const experiences = [
     endDate: "2022-10-12",
     description: "Developed and maintained core web applications for an AI/ML product platform with a focus on scalability, performance, and reliability.",
     highlights: [
-      "Contributed to full-stack development at Blue Bricks, working with Node.js, MongoDB, and React to build scalable and maintainable web applications.","Integrated AI/ML APIs into existing features by implementing backend logic in Node.js to fetch, process, and handle responses from machine learning models.","Parsed and transformed AI-generated data on the backend and delivered structured results to the frontend, enabling dynamic and interactive UI updates in React."
+      "Contributed to the development of full-stack web applications, building and maintaining production-ready features while collaborating with senior engineers throughout the development lifecycle.",
+      "Integrated AI/ML APIs into existing applications by implementing backend logic to fetch, process, and transform AI-generated responses into structured data, enabling dynamic and interactive user experiences on the frontend"
     ]
   },
   {
@@ -33,7 +41,10 @@ const experiences = [
     endDate: "2022-06-27",
     description: "Worked as a Software Engineer on AI-driven software products at a product-based company, contributing to the development and maintenance",
     highlights: [
-      "Built an internal tool for developers to manage packages, web apps, and other resources using React.js (frontend) and Node.js (backend), improving developer productivity.","Assisted in debugging and optimizing existing codebases to enhance performance and maintainability.","Collaborated with the analytics team to improve the Aadhar Redaction bot, a client-side deployed tool, enhancing its accuracy and efficiency in sensitive data redaction.","Contributed to the development of new features in an existing product, focusing on improving user experience and overall functionality.","Participated in the deployment process using Docker, helping ensure consistent environments and smoother application delivery across stages."
+      "Built and maintained internal engineering tools that simplified developer workflows, improved operational efficiency, and supported day-to-day engineering activities across multiple teams.",
+      "Delivered new features and resolved production issues for applications, contributing to application stability, maintainability, and an improved user experience while collaborating closely with senior engineers.",
+      "Enhanced backend processing by implementing Redis caching, RabbitMQ-based asynchronous workflows, and Python (Pandas) data processing, improving execution efficiency and supporting reliable processing of business-critical workloads.",
+      "Contributed to backend API development and system integrations while gaining hands-on experience with containerized deployments using Docker, modern software delivery practices, and production support."
     ]
   }
 ];

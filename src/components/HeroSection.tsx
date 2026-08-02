@@ -55,10 +55,10 @@ const HeroSection = () => {
   ];
 
   const handleDownload = () => {
-    const resumeUrl = '/Avinash-Kokare.pdf';
+    const resumeUrl = '/Avinash_Kokare_Resume.pdf';
     const link = document.createElement('a');
     link.href = resumeUrl;
-    link.download = 'Avinash-Kokare.pdf';
+    link.download = 'Avinash_Kokare_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -87,11 +87,11 @@ const HeroSection = () => {
             <motion.div className={styles.animatedText} variants={itemVariants}>
               <TypeAnimation
                 sequence={[
-                  'Frontend Developer',
+                  'Frontend Engineer',
                   1500,
-                  'Backend Developer',
+                  'Backend Engineer',
                   1500,
-                  'UI/UX Designer',
+                  'Software Engineer',
                   1500,
                 ]}
                 wrapper="h2"
