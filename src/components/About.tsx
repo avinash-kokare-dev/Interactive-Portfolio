@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import { useInView } from 'framer-motion';
 import styles from '../styles/About.module.scss';
 import { getYearOfExperience } from '@/utils/helper';
-import { FaCode, FaPalette, FaServer, FaSynagogue } from 'react-icons/fa';
+import { FaCode, FaPalette, FaServer } from 'react-icons/fa';
 
 const AboutSection = () => {
   const ref = useRef<HTMLDivElement>(null);
