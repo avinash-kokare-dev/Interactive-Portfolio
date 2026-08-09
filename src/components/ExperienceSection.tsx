@@ -21,18 +21,6 @@ const experiences = [
     ]
   },
   {
-    id: 2,
-    company: "Blue Bricks Pvt. Ltd, Pune",
-    position: "Full Stack Developer",
-    startDate: "2022-07-02",
-    endDate: "2022-10-12",
-    description: "Developed and maintained core web applications for an AI/ML product platform with a focus on scalability, performance, and reliability.",
-    highlights: [
-      "Contributed to the development of full-stack web applications, building and maintaining production-ready features while collaborating with senior engineers throughout the development lifecycle.",
-      "Integrated AI/ML APIs into existing applications by implementing backend logic to fetch, process, and transform AI-generated responses into structured data, enabling dynamic and interactive user experiences on the frontend"
-    ]
-  },
-  {
     id: 3,
     company: "Cere Labs Pvt. Ltd, Mulund",
     position: "Software Engineer",
